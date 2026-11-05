@@ -25,10 +25,11 @@ def filter_to_minimal_docs(docs: List[Document]) -> List[Document]:
     minimal_docs: List[Document] = []
     for doc in docs:
         src = doc.metadata.get("source")
+        page = doc.metadata.get("page")
         minimal_docs.append(
             Document(
                 page_content=doc.page_content,
-                metadata={"source": src}
+                metadata={"source": src,"page": page}
             )
         )
     return minimal_docs
@@ -36,8 +37,8 @@ def filter_to_minimal_docs(docs: List[Document]) -> List[Document]:
 #split the documents into smaller chunks
 def text_split(minimal_docs):
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size = 500,
-        chunk_overlap = 80
+        chunk_size = 900,
+        chunk_overlap = 90
     )
     text_chunks = text_splitter.split_documents(minimal_docs)
     return text_chunks
