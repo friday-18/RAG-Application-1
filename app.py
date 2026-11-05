@@ -24,7 +24,7 @@ os.environ["GEMINI_API_KEY"] = GEMINI_API_KEY
 
 embeddings = download_embeddings()
 
-index_name = "corporate-law-vector-db" 
+index_name = "the-indian-penal-code-index" 
 # load the existing index from vector db 
 # --not sure what this means : Embed each chunk and upsert the embeddings into your Pinecone index.
 docsearch = PineconeVectorStore.from_existing_index(
@@ -75,5 +75,5 @@ def chat():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port= 8070, debug= True)
+    app.run(host="0.0.0.0", port= 8071, debug= True)
 
