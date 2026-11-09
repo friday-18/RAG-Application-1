@@ -27,7 +27,7 @@ pc = Pinecone(api_key=pinecone_api_key)
 
 
 
-index_name = "the-indian-penal-code-index"  # change if desired
+index_name = "the-indian-penal-code-index"  # use the latest index name from pinecone if already created, else give a new name to create a new one
 
 if not pc.has_index(index_name):
     pc.create_index(
