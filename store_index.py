@@ -27,7 +27,7 @@ pc = Pinecone(api_key=pinecone_api_key)
 
 
 
-index_name = "corporate-law-vector-db"  # change if desired
+index_name = "the-indian-penal-code-index"  # change if desired
 
 if not pc.has_index(index_name):
     pc.create_index(
