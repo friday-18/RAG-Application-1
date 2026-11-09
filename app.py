@@ -74,8 +74,8 @@ def chat():
 
 
 
-#if __name__ == '__main__':
-#    app.run(host="0.0.0.0", port= 8070, debug= True)
-
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8070)))
+    app.run(host="0.0.0.0", port= 8070, debug= True)
+
+#if __name__ == '__main__':
+#   app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8070)))
